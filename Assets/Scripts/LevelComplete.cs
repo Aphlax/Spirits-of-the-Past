@@ -30,7 +30,7 @@ public class LevelComplete : MonoBehaviour
     }
 
     public void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.CompareTag("Player")) {
+        if (other.gameObject.CompareTag("Player") && !this.isLevelCompleted) {
             PlayerMovement pm = other.gameObject.GetComponent<PlayerMovement>();
             pm.Reset();
             pm.enabled = false;

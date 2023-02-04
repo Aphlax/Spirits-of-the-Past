@@ -13,11 +13,11 @@ public class ShowHint : MonoBehaviour
     
     // Start is called before the first frame update
     void Start() {
-        panel.active = false;
+        panel.SetActive(false);
     }
 
     // Update is called once per frame
     void Update() {
-        panel.active = Vector2.Distance(transform.position, player.transform.position) < distance;
+        panel.SetActive(Vector2.Distance(transform.position, player.transform.position) < distance);
     }
 }
