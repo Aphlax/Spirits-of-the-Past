@@ -803,7 +803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be4e65c0828dd594792c1627610d395d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSceneId: Test Scene
+  startSceneId: City
 --- !u!1 &1371962172
 GameObject:
   m_ObjectHideFlags: 0
