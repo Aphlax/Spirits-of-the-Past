@@ -7,11 +7,13 @@ public class PlayerMovement : MonoBehaviour
 
     public float speed;
     public float jump;
+    public float jumpDuration;
     public float dash;
     public float dashDuration;
     public float dashRechargeDuration;
 
     private Rigidbody2D rb;
+    private Animator anim;
     private bool isOnGround;
     private bool isJumping;
     private float jumpStart = 0f;
@@ -26,13 +28,14 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
         jumpVelocityAnimation = new  AnimationCurve(
             new Keyframe(0, 1),
-            new Keyframe(0.35f, 1),
-            new Keyframe(0.6f, 0),
-            new Keyframe(1.2f, -1.5f),
-            new Keyframe(1.8f, -2f)); // "Smooth" jump. haha
+            new Keyframe(0.35f / 0.6f, 1),
+            new Keyframe(0.6f / 0.6f, 0),
+            new Keyframe(1.2f / 0.6f, -1.5f),
+            new Keyframe(1.8f / 0.6f, -2f)); // "Smooth" jump. haha
         jumpVelocityAnimation.SmoothTangents(0, 0);
         jumpVelocityAnimation.SmoothTangents(2, 0);
         jumpVelocityAnimation.SmoothTangents(4, 0);
@@ -57,11 +60,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (Input.GetButtonUp("Jump") && this.isJumping && Time.time < this.jumpStart + 0.75f) {
-            this.jumpStart = Time.time - 0.65f; // jump to the middle of the jump animation
+            this.jumpStart = Time.time - jumpDuration * 1.0825f; // jump to the middle of the jump animation
         }
 
         if (this.isJumping) {
-            rb.velocity = new Vector2(rb.velocity.x, jumpVelocityAnimation.Evaluate(Time.time - this.jumpStart) * jump);
+            rb.velocity = new Vector2(rb.velocity.x, jumpVelocityAnimation.Evaluate((Time.time - this.jumpStart) / jumpDuration) * jump);
         }
 
         // ***** Dash. *****
@@ -94,6 +97,8 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.y < -2f * jump) { // terminal velocity.
             rb.velocity = new Vector2(rb.velocity.x, -2f * jump);
         }
+
+        UpdateAnimator();
     }
 
     public void OnCollisionEnter2D(Collision2D other) {
@@ -116,5 +121,14 @@ public class PlayerMovement : MonoBehaviour
         this.isDashing = false;
         this.dashStart = Time.time;
         this.hasUsedDashDuringJump = false;
+    }
+
+    private void UpdateAnimator() {
+        Vector2 scale = transform.localScale;
+        scale.x = Mathf.Sign(rb.velocity.x) * Mathf.Abs(scale.x);
+        transform.localScale = scale;
+        anim.SetFloat("speed", Mathf.Abs(rb.velocity.x));
+        anim.SetBool("isJumping", !this.isOnGround && !this.isDashing);
+        anim.SetBool("isDashing", this.isDashing);
     }
 }
