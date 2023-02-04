@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/City.unity
     guid: aa1a4770de96e0842b8691aa810dcf92
   - enabled: 1
-    path: Assets/Scenes/Test Scene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 640c1f64c02ce664194eec813144a285
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: a93f26b9d088d3f43a563c2725915e5c
+  - enabled: 1
+    path: Assets/Scenes/Test Scene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

@@ -441,23 +441,23 @@ Transform:
   - {fileID: 1296714861}
   - {fileID: 177932923}
   - {fileID: 1560298293}
-  - {fileID: 1830428568}
+  - {fileID: 922544825}
   - {fileID: 725406229}
   - {fileID: 2134579241}
   - {fileID: 880323291}
+  - {fileID: 1727330255}
   - {fileID: 1666730963}
   - {fileID: 2074472158}
-  - {fileID: 1603862437}
   - {fileID: 976102610}
-  - {fileID: 1902432890}
-  - {fileID: 471115691}
   - {fileID: 1882681144}
-  - {fileID: 1727330255}
-  - {fileID: 1307326395}
+  - {fileID: 1902432890}
   - {fileID: 999162350}
-  - {fileID: 922544825}
-  - {fileID: 825507876}
+  - {fileID: 1603862437}
+  - {fileID: 1307326395}
+  - {fileID: 1830428568}
+  - {fileID: 471115691}
   - {fileID: 1982559428}
+  - {fileID: 825507876}
   m_Father: {fileID: 751258630}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4410,6 +4410,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5198452472430910414, guid: 86f0e1bc249dc4d48b574b53f2d04269, type: 3}
+      propertyPath: nextSceneId
+      value: Level 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5198452472430910449, guid: 86f0e1bc249dc4d48b574b53f2d04269, type: 3}
       propertyPath: m_RootOrder
       value: 1
