@@ -16,10 +16,10 @@ public class CameraControl : MonoBehaviour
         center = transform.position.y;
 
         heightAnimation = new  AnimationCurve(
-            new Keyframe(-8, -4),
-            new Keyframe(-4, 0),
-            new Keyframe(4, 0),
-            new Keyframe(8, 4));
+            new Keyframe(-8, -6),
+            new Keyframe(-3, 0),
+            new Keyframe(3, 0),
+            new Keyframe(8, 6));
         heightAnimation.SmoothTangents(0, 0);
         heightAnimation.SmoothTangents(3, 0);
         heightAnimation.preWrapMode  = WrapMode.ClampForever;

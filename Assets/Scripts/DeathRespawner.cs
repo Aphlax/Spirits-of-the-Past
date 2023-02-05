@@ -36,6 +36,7 @@ public class DeathRespawner : MonoBehaviour
             transform.position = this.lastRespawnPoint.transform.position;
             this.isRespawning = true;
             this.lastRespawnTime = Time.time;
+            pm.Reset();
             pm.enabled = false; // disable player movement
         }
     }

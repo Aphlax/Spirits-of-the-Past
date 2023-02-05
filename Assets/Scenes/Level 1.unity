@@ -1870,6 +1870,7 @@ GameObject:
   m_Component:
   - component: {fileID: 221219688}
   - component: {fileID: 221219689}
+  - component: {fileID: 221219690}
   m_Layer: 0
   m_Name: Cliff 2
   m_TagString: Untagged
@@ -1944,6 +1945,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &221219690
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221219687}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -6.615, y: -5.799433}
+  - {x: 0.8855839, y: -5.734999}
+  - {x: 0.915184, y: -3.6260166}
+  - {x: 7.3374157, y: -3.457593}
+  - {x: 7.480751, y: -1.2269554}
+  - {x: 10.538145, y: 7.9315777}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &224890120
 GameObject:
   m_ObjectHideFlags: 0
