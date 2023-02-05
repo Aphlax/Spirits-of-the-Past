@@ -4414,17 +4414,21 @@ PrefabInstance:
       propertyPath: nextSceneId
       value: Level 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5198452472430910448, guid: 86f0e1bc249dc4d48b574b53f2d04269, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5198452472430910449, guid: 86f0e1bc249dc4d48b574b53f2d04269, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5198452472430910449, guid: 86f0e1bc249dc4d48b574b53f2d04269, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 150.7769
+      value: 152.37
       objectReference: {fileID: 0}
     - target: {fileID: 5198452472430910449, guid: 86f0e1bc249dc4d48b574b53f2d04269, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.09940666
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 5198452472430910449, guid: 86f0e1bc249dc4d48b574b53f2d04269, type: 3}
       propertyPath: m_LocalPosition.z

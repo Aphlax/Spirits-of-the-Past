@@ -7,6 +7,7 @@ public class LevelComplete : MonoBehaviour
 {
     public string nextSceneId;
     public float nextSceneDelay;
+    public float rotationSpeed;
 
     private bool isLevelCompleted = false;
     private float levelCompletedTime;
@@ -27,6 +28,8 @@ public class LevelComplete : MonoBehaviour
         if (this.isLevelCompleted && Time.time > this.levelCompletedTime + nextSceneDelay) {
             SceneManager.LoadScene(nextSceneId, LoadSceneMode.Single);
         }
+
+        transform.Rotate(0, 0, rotationSpeed + (isLevelCompleted ? rotationSpeed : 0));
     }
 
     public void OnTriggerEnter2D(Collider2D other) {
