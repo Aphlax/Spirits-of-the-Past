@@ -18,7 +18,7 @@ public class CameraControl : MonoBehaviour
         heightAnimation = new  AnimationCurve(
             new Keyframe(-8, -6),
             new Keyframe(-3, 0),
-            new Keyframe(3, 0),
+            new Keyframe(2, 0),
             new Keyframe(8, 6));
         heightAnimation.SmoothTangents(0, 0);
         heightAnimation.SmoothTangents(3, 0);
